@@ -54,7 +54,7 @@ export const Specials = () => {
 
       <GridLayout className={"h-min"}>
         {menus.map((menu) => {
-          console.log(menu.id);
+          // console.log(menu.id);
           return (
             <Link
               to={`/order/${menu.id}/${menu.dishName}`}
@@ -63,20 +63,20 @@ export const Specials = () => {
                 search: `${searchParams}`,
                 // type: typeFilter
               }}
-              class="group transition-all hover:scale-105 hover:shadow-sm"
+              className="group transition-all hover:scale-105 hover:shadow-sm"
             >
               <img
-                class="h-[200px] w-full rounded-t-xl object-cover"
+                className="h-[200px] w-full rounded-t-xl object-cover"
                 src={menu.imageUrl}
                 alt={menu.dishName}
                 loading="lazy"
               />
               <div className="flex flex-col space-y-6  bg-secondary-300 p-5 ">
-                <div class="mt-6 flex justify-between ">
-                  <h4 class="font-primary text-2xl  text-secondary-400">
+                <div className="mt-6 flex justify-between ">
+                  <h4 className="font-primary text-2xl  text-secondary-400">
                     {menu.dishName}
                   </h4>
-                  <p class="text-red-300">{menu.price}</p>
+                  <p className="text-red-300">{menu.price}</p>
                 </div>
                 <p className="self-center font-semibold text-primary-200">
                   {menu.description}

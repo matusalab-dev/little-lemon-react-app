@@ -11,7 +11,8 @@ export const OrderLayout = () => {
   const menuDetails = useContext(MenuContext);
   console.log(menuDetails);
   const menu = menuDetails.filter((menuDetail) => menuDetail.id === id);
-  //   console.log(menu[0]);
+  // console.log(menu[0]);
+
   return (
     <div className="custom-container  bg-primary-200 p-8 text-secondary-300">
       <Link
@@ -19,11 +20,11 @@ export const OrderLayout = () => {
         // relative="path"
         //   this will return to the route not the current path
         // we don't set relative to 'path'
-        className="ml-4 mt-2 font-semibold "
+        className=" mt-2 font-semibold "
       >
         back to home
       </Link>
-      <h2 className="ml-4 mt-10 text-4xl font-bold ">Orders Details </h2>
+      <h2 className="mb-5 mt-6 text-4xl font-bold ">Orders Details </h2>
       <Outlet context={menu[0]} />
     </div>
   );

@@ -19,7 +19,6 @@ export const NavHashList = ({ title, href, display }) => {
     <li key={title} className="justify-center">
       <AnchorLink
         href={href}
-        smooth
         className={`${display}  transition-background  px-6 py-2 transition-colors duration-100 ease-out hover:bg-primary-200 hover:text-primary-100`}
       >
         {title}

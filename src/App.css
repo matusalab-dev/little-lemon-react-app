@@ -1,0 +1,56 @@
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  display: inline-flex;
+  align-items: center;
+}
+
+.number-input button {
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* padding: 4px 8px; */
+}
+
+input[type="number"] {
+  /* padding: 4px 8px; */
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.seating {
+  appearance: none;
+  /* background: none; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+
+  /* border-radius: 50%; */
+  width: 29px;
+  height: 29px;
+  outline: 2px solid white;
+  outline-offset: 4px;
+  transition: 0.12s all linear;
+  border: none;
+}
+
+input[type="radio"].seating:checked {
+  outline: 2px solid white;
+  outline-offset: 5px;
+  border: none;
+  background: white;
+}
+.error {
+  outline: 2px solid red;
+}

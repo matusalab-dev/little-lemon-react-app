@@ -40,7 +40,7 @@ export const CustomerSay = () => {
       </h2>
       {/*testimonials grid  */}
       <GridLayout
-        className={`custom-container  gap-x-6 gap-y-12 px-6 lg:px-4 sm:mt-12`}
+        className={`custom-container  gap-x-6 gap-y-12 lg:px-4 md:px-6 sm:mt-12`}
       >
         {/* <div className="custom-container mt-16 sm:mt-12 grid grid-cols-galleryCol  grid-flow-row-dense gap-x-6 gap-y-12"> */}
         {/* looping through the customers */}
@@ -48,20 +48,20 @@ export const CustomerSay = () => {
           return (
             <div
               key={index}
-              class=" cursor-pointer bg-red-200 px-5 py-6 transition-all hover:scale-105 hover:shadow-md"
+              className=" cursor-pointer bg-red-200 px-5 py-6 transition-all hover:scale-105 hover:shadow-md"
             >
               <div className="flex flex-col  space-y-8">
-                <span class="flex font-primary text-4xl font-bold text-primary-100">
+                <span className="flex font-primary text-4xl font-bold text-primary-100">
                   {testimonial.rating}
                   {testimonial.rating}
                   {testimonial.rating}
-                  {/* {testimonial.rating}
-                  {testimonial.rating} */}
+                  {testimonial.rating}
+                  {/*testimonial.rating} */}
                 </span>
 
                 <div className="flex content-center space-x-6">
                   <img
-                    class="h-[100px] w-[100px] rounded-full  object-cover"
+                    className="h-[100px] w-[100px] rounded-full  object-cover"
                     src={testimonial.imageUrl}
                     alt="Title"
                   />
