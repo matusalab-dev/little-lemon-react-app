@@ -26,7 +26,10 @@ export default function App() {
         <Route path="/reserve" element={<BookingLayout />}>
           <Route index element={<Booking />} />
           <Route path="CustomerForm" element={<CustomerForm />} />
+
           <Route path="ConfirmedBooking" element={<ConfirmedBooking />} />
+
+          {/* <Route /> */}
         </Route>
       </Routes>
     </>

@@ -1,23 +1,27 @@
 import React from "react";
 import { getStateFromStorage } from "./BookingForm";
 import { FormatDate } from "../utils/FormatDate";
+import { useLocation } from "react-router-dom";
+import { MdCheckCircle } from "react-icons/md";
 const formValues = getStateFromStorage("state");
 const formState = getStateFromStorage("formState");
 console.log(formValues);
 const ConfirmedBooking = () => {
+  const values = useLocation();
+  const [month, day] = FormatDate(values.state.date);
+
   return (
-    <div className="mx-auto flex h-60 w-[75%] flex-col items-center justify-center bg-primary-200 p-8 text-left text-lg font-semibold text-primary-100 sm:w-full sm:items-start sm:p-3 ">
-      <h2 className="block self-center text-3xl font-bold capitalize">
-        confirmed!
-      </h2>
-      <p>
-        your table is reserved for date:{" "}
-        {FormatDate(Date.parse(formValues.selectedDate))}
-      </p>
-      <p>
-        {`you reserve a table for ${formState.guests} person in the ${formState.seating} for your ${formState.occasion}`}
-      </p>
-      <p>your table Reservation is confirmed!</p>
+    <div className="custom-container flex h-60  flex-col items-center justify-center bg-primary-200 p-8 text-left text-lg font-semibold text-primary-100 sm:w-full sm:items-start sm:p-3 ">
+      <div class="mx-auto flex max-w-[30rem] flex-col items-center space-y-2">
+        <MdCheckCircle className=" text-center text-5xl" />
+        <h2 className="block max-w-[35ch] self-center text-2xl font-bold   md:text-xl">
+          Your reservation has been confirmed!
+        </h2>
+        <p className="md:font-normal">
+          your table is reserved for {`${month}, ${day}.`}
+        </p>
+        <p className="mt-4 text-center">Please check your email.</p>
+      </div>
     </div>
   );
 };

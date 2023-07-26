@@ -5,7 +5,6 @@ import cart from "../assets/Basket.svg";
 import { Link } from "react-router-dom";
 import { NavLinkList } from "./NavList";
 import { NavHashList } from "./NavList";
-import { NavHashLink } from "react-router-hash-link";
 
 export const Navbar = () => {
   const [toggle, setToggle] = useState(false);

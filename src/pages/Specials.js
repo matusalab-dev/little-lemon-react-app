@@ -40,7 +40,7 @@ export const Specials = () => {
       className="custom-container pt-24 lg:px-4 md:mb-[5rem] sm:mb-[7.5rem]"
     >
       <header className="flex justify-between">
-        <h2 className="font-primary text-5xl capitalize underline-offset-[6px] sm:mx-auto sm:underline ">
+        <h2 className="font-primary text-5xl font-medium capitalize underline-offset-[6px] md:text-4xl  sm:underline ">
           this weeks specials!
         </h2>
         <button className="rounded-md bg-primary-100 px-8 py-2 text-lg font-semibold text-secondary-400 sm:hidden">

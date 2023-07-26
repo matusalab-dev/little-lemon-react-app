@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Outlet, useParams } from "react-router-dom";
 import { MenuContext } from "../Contexts/MenuContext";
 import { Link } from "react-router-dom";
+import { MdArrowCircleLeft } from "react-icons/md";
 
 export const OrderLayout = () => {
   //   const location = useLocation();
@@ -22,7 +23,7 @@ export const OrderLayout = () => {
         // we don't set relative to 'path'
         className=" mt-2 font-semibold "
       >
-        back to home
+        <MdArrowCircleLeft className="text-3xl" />
       </Link>
       <h2 className="mb-5 mt-6 text-4xl font-bold ">Orders Details </h2>
       <Outlet context={menu[0]} />

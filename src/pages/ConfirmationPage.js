@@ -41,6 +41,7 @@ export const Booking = () => {
               className="mt-2 font-semibold text-secondary-300"
             >
               back to home
+              <img src="../assets/home icon.svg" />
             </Link>
             <h2 className="mb-10 mt-3 font-primary  text-6xl text-primary-100">
               Reservations
@@ -118,7 +119,7 @@ export const Booking = () => {
                   }
                 />
               </div>
-              <div class="mb-3 w-1/2">
+              <div className="mb-3 w-1/2">
                 <GridSlot
                   NumberOfSlot={availableTime}
                   colNumber={2}
